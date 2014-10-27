@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- AutoCompleteTextView -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <!-- 查找框 -->
+
+        <AutoCompleteTextView
+            android:id="@+id/repo_header_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/repo_header_shape"
+            android:drawableLeft="@drawable/ic_action_search"
+            android:drawablePadding="14dp"
+            android:drawableRight="@drawable/ic_action_cancel"
+            android:imeOptions="actionSend"
+            android:inputType="text"
+            android:singleLine="true" >
+        </AutoCompleteTextView>
+
+        <!-- 此处是一个间隔 -->
+
+        <View
+            android:id="@+id/main_header_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dark_hit" >
+        </View>
+    </LinearLayout>
+
+    <!-- PullToRefreshLayout -->
+
+    <uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ptr_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ListView
+                android:id="@+id/repo_fragment_listview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </ListView>
+        </LinearLayout>
+    </uk.co.senab.actionbarpulltorefresh.library.PullToRefreshLayout>
+
+</LinearLayout>
